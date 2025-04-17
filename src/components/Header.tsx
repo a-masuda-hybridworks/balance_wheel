@@ -37,7 +37,7 @@ const Header = () => {
       <Toolbar>
         <Box
           component="img"
-          src={`${process.env.PUBLIC_URL}/02_01_logo.svg`}
+          src="https://a-masuda-hybridworks.github.io/balance_wheel/02_01_logo.svg"
           alt="ロゴ"
           sx={{ height: 40 }}
         />
