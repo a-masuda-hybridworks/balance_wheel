@@ -316,14 +316,21 @@ const RadarChartComparison: React.FC = () => {
                       />
                     </Grid>
                     <Grid item xs={12} sm={2}>
-                      <Slider
-                        size="small"
-                        value={chart.values[idx]}
-                        max={10}
-                        min={1}
-                        onChange={(_, newVal) => handleSliderChange(chart.values, chart.setValues, idx, newVal as number)}
-                        sx={{ color: chart.title === "現在のバランスホイール" ? "#00da8f" : "#0087b8" }}
-                      />
+                    <Slider
+                      size="small"
+                      value={chart.values[idx]}
+                      max={10}
+                      min={1}
+                      onChange={(_, newVal) => handleSliderChange(chart.values, chart.setValues, idx, newVal as number)}
+                      sx={{
+                      color: chart.title === "現在のバランスホイール" ? "#00da8f" : "#0087b8",
+                      height: 6,
+                      '& .MuiSlider-thumb': {
+                      width: 14,
+                      height: 14
+                        }
+                      }}
+                    />
                     </Grid>
                     <Grid item xs={12} sm={5}>
                       <TextField

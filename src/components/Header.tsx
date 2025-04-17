@@ -90,13 +90,13 @@ const Header = () => {
               </Typography>
               <Box component="ul" sx={{ pl: 2 }}>
                 <Typography component="li" variant="body2">
-                  PCからご利用ください。
+                  PC/スマホで利用が可能。
                 </Typography>
                 <Typography component="li" variant="body2">
                   画面をリロードすると、入力した内容がリセットされます（タブ移動は問題ありません）。
                 </Typography>
                 <Typography component="li" variant="body2">
-                  入力された情報は利用者側のブラウザ上で一時的に保存されるだけで、運営側では一切保存しておりません。安心してご利用ください。
+                  入力された情報は利用者側のブラウザ上で一時的に保存されるだけで、運営側では一切保存しておりません。
                 </Typography>
               </Box>
             </Alert>
