@@ -35,13 +35,18 @@ const Header = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor: "#ffffff", mb: 2 }}>
       <Toolbar>
-      <Box component="img" src="/02_01_logo.svg" alt="ロゴ" sx={{ height: 40 }} />
+        <Box
+          component="img"
+          src={`${process.env.PUBLIC_URL}/02_01_logo.svg`}
+          alt="ロゴ"
+          sx={{ height: 40 }}
+        />
         <Button
           variant="outlined"
           sx={{ color: "#333", borderColor: "#333", marginLeft: "auto" }}
           onClick={handleOpenAbout}
         >
-          人生の輪とは？
+          バランスホイールとは？
         </Button>
         <Button
           variant="outlined"
@@ -51,12 +56,14 @@ const Header = () => {
           ツールの利用方法
         </Button>
       </Toolbar>
+
+      {/* バランスホイールとはダイアログ */}
       <Dialog open={openAbout} onClose={handleCloseAbout}>
-        <DialogTitle>人生の輪とは？</DialogTitle>
+        <DialogTitle>バランスホイールとは？</DialogTitle>
         <DialogContent>
           <Typography variant="body1" gutterBottom>
-            人生の輪とは、自分の人生に対して8つの側面から評価をつけ、自分が何に満足しているか、何に不満を持っているかを認識するためのツールです。<br /><br />
-            自己評価や目標設定の際に活用されることがあります。<br />
+          バランスホイールとは、自分の人生に対して評価をつけ、自分が何に満足しているか、何に不満を持っているかを認識するためのツールです。<br /><br />
+            自己評価や目標設定の際に活用されることがあります。
           </Typography>
         </DialogContent>
         <DialogActions>
@@ -65,15 +72,17 @@ const Header = () => {
           </Button>
         </DialogActions>
       </Dialog>
+
+      {/* ツールの使い方ダイアログ */}
       <Dialog open={openUsage} onClose={handleCloseUsage}>
         <DialogTitle>ツールの利用方法</DialogTitle>
         <DialogContent>
           <Box sx={{ mb: 2 }}>
             <Typography variant="body1" gutterBottom>
               画面を下にスクロールしたところに入力項目があります。<br />
-              各項目に対して<strong>満足度</strong>と、<strong>どうしてその点数をつけたのかの理由や現状</strong>などを書きましょう。
+              各項目に対して<strong>満足度</strong>と、<strong>現在の状態および未来の状態目標</strong>などを書きましょう。
               記入すると自動的に画面上部に表示がされます。<br /><br />
-              作成が完了したら「画像として保存する」から画像で保存しておきましょう。<br />
+              作成が完了したら「PDFとして保存する」もしくは「Excelとして保存する」から保存しておきましょう。
             </Typography>
             <Alert severity="info" sx={{ mt: 2 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: "bold", mb: 1 }}>
